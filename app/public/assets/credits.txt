@@ -1,0 +1,52 @@
+Windows 7 Portfolio — asset credits
+
+Default wallpaper (wallpaper.webp)
+Original Windows 7 desktop wallpaper, Microsoft Corporation.
+Source collection: https://github.com/bartekl1/windows-ui-assets
+Source path: Wallpapers/Windows 7/Desktop/Windows/img0.jpg
+Converted to WebP for delivery; appearance unchanged. Microsoft retains rights
+to its imagery; the collection does not confer a new license to those assets.
+
+Alternate wallpapers (starter.webp, logon.webp)
+Recreated by maxik34 / Project_7, https://github.com/maxik34/Project_7
+Source: Wallpapers/PNG/Starter7-Wide2K (Logoless).png,
+Logon7-Wide2K.png. Converted to WebP for delivery; appearance unchanged.
+License: Creative Commons Attribution 4.0 International. Full text in
+Project7-LICENSE.txt. https://creativecommons.org/licenses/by/4.0/
+
+Start orb (orb.svg, orb-hover.svg)
+TheRealBYK, https://github.com/TheRealBYK/win7-start-orbs
+Source: images/Start_button.svg, images/Start_Button_hover.svg.
+Public fan recreation; no explicit license was published in the repository.
+
+Desktop/application icons
+B00merang-Artwork / Windows-7, port of the Win2-7 icon theme.
+https://github.com/B00merang-Artwork/Windows-7
+Credits: original Win2-7 theme and Xopek-Endurance.
+computer.png: filesystems/computer.png
+folder.png: filesystems/folder-documents.png
+user.png: apps/user-info.png
+notepad.png: apps/gedit.png
+calculator.png: apps/gcalctool.png
+personalize.png: apps/preferences-desktop-theme.png
+mail.png: actions/mail_new.png
+trash.png: filesystems/gnome-fs-trash-empty.png
+volume.png: status/48/audio-volume-high-panel.png
+network.png: devices/16/network-wired.png
+back.png, forward.png: actions/16/back.png, actions/16/forward.png
+search.png: actions/16/edit-find.png
+save.png: actions/16/document-save.png
+Windows-derived images remain attributed to Microsoft. Public availability
+is not a claim of an unrestricted license to Microsoft's underlying assets.
+
+Window controls and UI styling: 7.css by khang-nd, MIT.
+https://github.com/khang-nd/7.css
+7.css is installed as a package; its embedded control images are unmodified.
+
+Interface chime: original synthesized sine-tone sequence, generated at runtime.
+Typography: locally installed Segoe UI; Tahoma/Arial/sans-serif fallback.
+No font files are distributed.
+
+Windows and Windows 7 are trademarks of Microsoft Corporation.
+This is an independent portfolio tribute, not an official Microsoft product.
+Mitch Ivin's website was used as interaction inspiration, not as source code.
