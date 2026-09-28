@@ -1696,6 +1696,14 @@ button .icon {
   display: grid;
   place-items: center;
 }
+.login-avatar > img,
+.start-avatar > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  padding: 4px;
+}
 .login-tile > span {
   font-size: 23px;
 }

@@ -44,6 +44,9 @@ https://github.com/khang-nd/7.css
 7.css is installed as a package; its embedded control images are unmodified.
 
 Interface chime: original synthesized sine-tone sequence, generated at runtime.
+AOL AIM icon (aim.png): classic AOL Instant Messenger running-man mark.
+Source: https://www.pikpng.com/transpng/iibhbbw/
+Original artwork and trademarks belong to AOL; used for this personal tribute.
 Typography: locally installed Segoe UI; Tahoma/Arial/sans-serif fallback.
 No font files are distributed.
 

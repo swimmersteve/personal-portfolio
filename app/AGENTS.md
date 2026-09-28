@@ -2,6 +2,16 @@
 
 ## Portfolio direction
 
+Use Steve Tang as the portfolio name and the supplied portrait at
+`public/assets/steve-tang.jpg` for the login and Start menu user tiles.
+
+Chat with Steve uses an AOL AIM-inspired instant-message interface inside the
+existing Aero desktop. Reuse the chatbot context from the sibling `me` project;
+keep its documents and credentials server-side. Use the classic AOL AIM icon,
+Steve as the chat screen name, and Online for the connected status. Describe
+the chat as Steve's digital twin; omit AI buddy wording and the chat footer.
+Default the Recycle Bin to the top-right corner of the desktop.
+
 Use authentic Windows 7 Aero styling and detailed desktop interactions. Keep the
 React + TypeScript + Vite app local until publishing is explicitly requested.
 The first release includes portfolio apps, Notepad, Calculator, and Personalization.

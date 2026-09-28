@@ -1,4 +1,5 @@
 export type AppId =
+  | "chat"
   | "welcome"
   | "about"
   | "projects"
@@ -16,6 +17,13 @@ export interface AppDefinition {
   description: string;
 }
 export const apps: Record<AppId, AppDefinition> = {
+  chat: {
+    title: "Chat with Steve",
+    icon: "aim",
+    width: 720,
+    height: 570,
+    description: "Chat with Steve's digital twin about his experience and projects",
+  },
   welcome: {
     title: "Getting Started",
     icon: "computer",

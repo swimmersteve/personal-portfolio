@@ -33,6 +33,7 @@ const desktopIds: AppId[] = [
   "projects",
   "resume",
   "contact",
+  "chat",
   "recycle",
 ];
 const pinnedIds: AppId[] = ["projects", "notepad", "calculator"];
@@ -52,6 +53,11 @@ function viewport(): Viewport {
     width: window.innerWidth,
     height: window.innerHeight - (window.innerWidth < 768 ? 56 : 40),
   };
+}
+function migratedIconPositions(): Positions {
+  const previous = readStored<unknown>("icons", {});
+  if (!validPositions(previous)) return {};
+  return Object.fromEntries(Object.entries(previous).filter(([id]) => id !== "recycle"));
 }
 function cycleMenu(e: KeyboardEvent<HTMLElement>) {
   if (!["ArrowDown", "ArrowUp", "Home", "End"].includes(e.key)) return;
@@ -83,8 +89,8 @@ export function App() {
     validPreferences,
   );
   const [positions, setPositions] = useStored<Positions>(
-    "icons",
-    {},
+    "icons-recycle-right",
+    migratedIconPositions(),
     validPositions,
   );
   const [popup, setPopup] = useState<"start" | "clock" | "volume" | null>(null);
@@ -321,7 +327,7 @@ export function App() {
                 aria-label={`Log in as ${portfolio.name}`}
               >
                 <div className="login-avatar">
-                  <Icon name="user" size={84} />
+                  <img src="/assets/steve-tang.jpg" alt={portfolio.name} />
                 </div>
                 <span>{portfolio.name}</span>
               </button>
@@ -382,7 +388,9 @@ export function App() {
           <DesktopIcon
             key={id}
             id={id}
-            position={positions[id] ?? { x: 12, y: 12 + index * 98 }}
+            position={positions[id] ?? (id === "recycle"
+              ? { x: Math.max(12, size.width - 98), y: 12 }
+              : { x: 12, y: 12 + index * 98 })}
             size={size}
             selected={selected === id}
             select={() => setSelected(id)}
@@ -489,7 +497,7 @@ export function App() {
           </div>
           <div className="start-right">
             <div className="start-avatar">
-              <Icon name="user" size={48} />
+              <img src="/assets/steve-tang.jpg" alt={portfolio.name} />
             </div>
             <button className="start-name" onClick={() => open("about")}>
               {portfolio.name}

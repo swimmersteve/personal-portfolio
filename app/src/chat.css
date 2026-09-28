@@ -1,0 +1,37 @@
+.aim-app { height: 100%; display: flex; flex-direction: column; background: #eeeae0; color: #171717; font-family: Tahoma, Arial, sans-serif; min-height: 360px; container-type: inline-size; }
+.aim-toolbar { display: flex; align-items: center; gap: 6px; padding: 7px 10px; border-bottom: 1px solid #aaa38f; background: linear-gradient(#fff9db, #ead89a); }
+.aim-wordmark { flex: 1; font-size: 15px; font-weight: bold; letter-spacing: -.6px; color: #38311a; }
+.aim-toolbar button { min-width: 0; padding: 3px 7px; }
+.aim-layout { display: flex; flex: 1; min-height: 0; }
+.aim-buddies { display: flex; flex-direction: column; width: 155px; flex-shrink: 0; padding: 10px; border-right: 1px solid #aaa38f; background: #f7f4e8; }
+.aim-buddy-heading { font-weight: bold; font-size: 17px; padding-bottom: 12px; color: #3d3928; }
+.aim-group { font-weight: bold; font-size: 11px; padding: 5px 0; }
+.aim-selected-buddy { display: flex; align-items: center; gap: 7px; background: #184c9c; color: white; padding: 6px; margin: 0 -4px 18px; }
+.aim-presence { display: inline-block; width: 8px; height: 8px; flex-shrink: 0; border-radius: 50%; background: #7c7c7c; border: 1px solid #ffffff80; }
+.aim-presence.online { background: #369329; }
+.aim-presence.checking { background: #bd8f00; }
+.aim-portrait { width: 86px; height: 86px; object-fit: cover; padding: 3px; background: white; border: 1px solid #a39b80; margin-bottom: 8px; }
+.aim-twin-label { color: #645c3b; margin-top: 6px; font-size: 12px; line-height: 1.5; }
+.aim-conversation { flex: 1; min-width: 0; min-height: 0; display: flex; flex-direction: column; padding: 8px; gap: 7px; }
+.aim-recipient { display: flex; align-items: center; justify-content: space-between; gap: 6px; flex-wrap: wrap; padding: 3px 2px; }
+.aim-recipient strong { color: #153f8b; }
+.aim-connection { font-size: 10px; color: #57554a; display: flex; align-items: center; gap: 4px; }
+.aim-transcript { flex: 1; min-height: 80px; background: #fff; border: 1px solid #8c8c82; box-shadow: inset 1px 1px 0 #d8d6cd; padding: 10px; overflow: auto; font-family: Arial, sans-serif; font-size: 13px; line-height: 1.55; overflow-wrap: anywhere; }
+.aim-transcript.aim-large { font-size: 16px; }
+.aim-system { color: #727272; font-size: 11px; margin: 0 0 12px; }
+.aim-message { margin: 0 0 12px; white-space: pre-wrap; }
+.aim-screenname.assistant { color: #163aa4; }
+.aim-screenname.user { color: #b51a1a; }
+.aim-screenname small { font-weight: normal; font-size: 10px; }
+.aim-starters { display: flex; gap: 4px; flex-wrap: wrap; }
+.aim-starters button { font-size: 10px; padding: 3px 6px; min-width: 0; }
+.aim-compose { display: flex; flex-direction: column; gap: 5px; }
+.aim-compose label { font-size: 11px; font-weight: bold; }
+.aim-compose textarea { width: 100%; height: 70px; min-height: 45px; resize: none; padding: 7px; border: 1px solid #89897f; background: white; font-size: 13px; }
+.aim-send-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.aim-send-row small { font-size: 10px; color: #645e4f; }
+.aim-send { min-width: 80px; font-weight: bold; }
+.aim-error { color: #872013; background: #fff0d7; padding: 7px; font-size: 11px; }
+.aim-error button { margin-top: 4px; }
+@media (max-width: 560px) { .aim-buddies { display: none; } .aim-wordmark { font-size: 13px; } .aim-toolbar { padding: 6px; } .aim-compose textarea { height: 80px; } }
+@container (max-width: 500px) { .aim-buddies { display: none; } .aim-wordmark { font-size: 13px; } .aim-toolbar { padding: 6px; } .aim-send-row small { max-width: 165px; } }

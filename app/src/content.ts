@@ -23,7 +23,7 @@ export interface Portfolio {
 // Replace this module with your own content. Optional URLs stay unavailable until supplied.
 export const portfolio: Portfolio = {
   sample: true,
-  name: "Your Name",
+  name: "Steve Tang",
   role: "Your title goes here",
   introduction: "A little about the person behind the desktop.",
   biography:

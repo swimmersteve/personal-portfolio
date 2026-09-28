@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Chat } from "./Chat";
 import { portfolio } from "./content";
 import { Icon } from "./Icon";
 import { apps, calculate, initialCalc, type AppId } from "./model";
@@ -35,11 +36,12 @@ type Props = {
   setPreferences: (p: Preferences) => void;
 };
 export function Application({ id, open, preferences, setPreferences }: Props) {
+  if (id === "chat") return <Chat />;
   if (id === "welcome") return <Welcome open={open} />;
   if (id === "projects") return <Projects open={open} />;
   if (id === "about") return <About open={open} />;
   if (id === "resume") return <Resume />;
-  if (id === "contact") return <Contact />;
+  if (id === "contact") return <Contact open={open} />;
   if (id === "notepad") return <Notepad />;
   if (id === "calculator") return <Calculator />;
   if (id === "personalize")
@@ -353,7 +355,7 @@ function Resume() {
     </>
   );
 }
-function Contact() {
+function Contact({ open }: { open: (id: AppId) => void }) {
   return (
     <>
       <Toolbar title="Contact Me" />
@@ -366,6 +368,11 @@ function Contact() {
           </div>
         </div>
         <div className="contact-list">
+          <div className="contact-row">
+            <Icon name="aim" size={28} />
+            <div><strong>Chat with Steve</strong><p>Chat with Steve’s digital twin about his work, skills, and projects.</p></div>
+            <button onClick={() => open("chat")}>Send an IM</button>
+          </div>
           {portfolio.links.map((link) => (
             <div className="contact-row" key={link.label}>
               <Icon
